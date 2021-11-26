@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:uchet"
         mc:Ignorable="d"
-        Title="EMACC: СОТРУДНИКИ" WindowState="Normal" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="EMACC: СОТРУДНИКИ" WindowState="Normal" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="650" MinWidth="1000">
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Template">
@@ -215,7 +215,7 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="280*"/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
@@ -223,7 +223,7 @@
                 <RowDefinition/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <DataGrid Grid.Column="0" RowHeight="30"  Grid.Row="0" Grid.RowSpan="1" x:Name="DGAllEmp" HorizontalAlignment="Center" IsReadOnly="True"  ColumnWidth="*" VerticalAlignment="Top"  AutoGenerateColumns="False" MinColumnWidth="20" GridLinesVisibility="All" MouseDoubleClick="DGAllEmp_MouseDoubleClick">
+            <DataGrid Grid.Column="0" RowHeight="30"  Grid.Row="0" Grid.RowSpan="1" x:Name="DGAllEmp" HorizontalAlignment="Center" IsReadOnly="True"  ColumnWidth="*" VerticalAlignment="Top"  AutoGenerateColumns="False" MinColumnWidth="20" GridLinesVisibility="All" MouseDoubleClick="DGAllEmp_MouseDoubleClick" Margin="10,10,717,0" Width="265">
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="FontSize" Value="16"/>
@@ -233,10 +233,6 @@
                     <DataGridTextColumn  Header="Фамилия" Width="0.8*" Binding="{Binding SN}"  FontSize="14" FontWeight="Bold"/>
                     <DataGridTextColumn Header="Имя" Width="0.8*" Binding="{Binding FN}" FontSize="14" FontWeight="Bold"/>
                     <DataGridTextColumn Header="Отчество" Width="0.8*" Binding="{Binding MN}" FontSize="14" FontWeight="Bold"/>
-                    <DataGridTextColumn Header="Дата рождения" Width="*" Binding="{Binding DoB}" FontSize="14" FontWeight="Bold" />
-                    <DataGridTextColumn Header="Телефон" Width="1*" Binding="{Binding Phone}" FontSize="14" FontWeight="Bold"/>
-                    <DataGridTextColumn Header="Должность" Width="1.3*" Binding="{Binding Post}" FontSize="14" FontWeight="Bold"/>
-                    <DataGridTextColumn Header="Статус" Width="0.7*" Binding="{Binding Status}" FontSize="14" FontWeight="Bold"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="BtnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnAdd_Click" Grid.Row="1" FontWeight="Bold" FontSize="14">
@@ -274,6 +270,22 @@
                     <ToolTip Content="Открыть справку о программе"/>
                 </Button.ToolTip>
             </Button>
+            <TabControl HorizontalAlignment="Left" Height="539" Margin="286,10,0,0" VerticalAlignment="Top" Width="694">
+                <TabItem Header="Общие данные">
+                    <Grid Background="#FFE5E5E5">
+                        <Image HorizontalAlignment="Left" Height="169" Margin="531,15,0,0" VerticalAlignment="Top" Width="140" Source="img/maxresdefault.jpg" Stretch="Fill"/>
+                        <Label Content="Имя" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Margin="291,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="45" Height="25"/>
+                        <TextBox HorizontalAlignment="Left" Height="25" Margin="346,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Фамилия" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="85" Height="25"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Отчество" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,56,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="85" Height="24"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Персональные данные">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
         </Grid>
     </Grid>
 </Window>

@@ -186,6 +186,7 @@
     <Resource Include="img\minus.png" />
     <Resource Include="logo.ico" />
     <Resource Include="img\excel.png" />
+    <Resource Include="img\maxresdefault.jpg" />
     <Content Include="uchet.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
