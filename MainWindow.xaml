@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:uchet"
         mc:Ignorable="d"
-        Title="EMACC: СОТРУДНИКИ" WindowState="Normal" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="650" MinWidth="1000">
+        Title="EMACC: СОТРУДНИКИ" WindowState="Normal" WindowStartupLocation="CenterScreen" Height="400" Width="800" MinHeight="400" MinWidth="1000">
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Template">
@@ -270,20 +270,50 @@
                     <ToolTip Content="Открыть справку о программе"/>
                 </Button.ToolTip>
             </Button>
-            <TabControl HorizontalAlignment="Left" Height="539" Margin="286,10,0,0" VerticalAlignment="Top" Width="694">
-                <TabItem Header="Общие данные">
-                    <Grid Background="#FFE5E5E5">
-                        <Image HorizontalAlignment="Left" Height="169" Margin="531,15,0,0" VerticalAlignment="Top" Width="140" Source="img/maxresdefault.jpg" Stretch="Fill"/>
-                        <Label Content="Имя" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Margin="291,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="45" Height="25"/>
+            <TabControl HorizontalAlignment="Left" Margin="286,10,0,0" Width="694" Height="284" VerticalAlignment="Top">
+                <TabItem Header="Общие сведения">
+                    <Grid Background="#FFE5E5E5" Margin="0,0,0,1">
+                        <Image HorizontalAlignment="Left" Height="146" Margin="531,15,0,0" VerticalAlignment="Top" Width="140" Source="img/maxresdefault.jpg" Stretch="Fill"/>
+                        <Label Content="Имя" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Margin="291,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="50" Height="25"/>
                         <TextBox HorizontalAlignment="Left" Height="25" Margin="346,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
-                        <Label Content="Фамилия" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="85" Height="25"/>
+                        <Label Content="Фамилия" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="90" Height="25"/>
                         <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
-                        <Label Content="Отчество" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,56,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="85" Height="24"/>
-                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Отчество" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,55,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="90" Height="25"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Должность" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,95,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="90" Height="29"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Статус" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="260,54,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="81" Height="29"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="346,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Адрес регистрации" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="132" Height="29"/>
+                        <TextBox x:Name="TbAdress" Style="{StaticResource MyWaterMarkStyle}" Tag="Улица" HorizontalAlignment="Left"  Height="26" Margin="147,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                        <TextBox HorizontalAlignment="Left"  Height="26" Style="{StaticResource MyWaterMarkStyle}" Tag="Дом" Margin="311,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45"/>
+                        <TextBox HorizontalAlignment="Left"  Height="26" Style="{StaticResource MyWaterMarkStyle}" Tag="Корпус" Margin="366,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+                        <TextBox HorizontalAlignment="Left"  Height="26" Style="{StaticResource MyWaterMarkStyle}" Tag="Квартира" Margin="445,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"/>
+                        <Label Content="Личный телефон" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,176,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="131" Height="27"/>
+                        <TextBox HorizontalAlignment="Left"  Height="26" Margin="147,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Домашний телефон" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="4,215,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="138" Height="27"/>
+                        <TextBox HorizontalAlignment="Left"  Height="26" Margin="147,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Электронная почта" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="309,176,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="162" Height="27"/>
+                        <TextBox HorizontalAlignment="Left"  Height="26" Margin="476,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Персональные данные">
-                    <Grid Background="#FFE5E5E5"/>
+                    <Grid Background="#FFE5E5E5" Margin="0,0,0,1">
+                        <Image HorizontalAlignment="Left" Height="146" Margin="531,15,0,0" VerticalAlignment="Top" Width="140" Source="img/maxresdefault.jpg" Stretch="Fill"/>
+                        <Label Content="Кем выдан" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Margin="266,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="75" Height="25"/>
+                        <TextBox HorizontalAlignment="Left" Height="25" Margin="346,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                        <Label Content="Паспорт" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,15,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="90" Height="25"/>
+                        <TextBox HorizontalAlignment="Left" Style="{StaticResource MyWaterMarkStyle}" Tag="Серия"  Height="25" Margin="106,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                        <Label Content="Дата выдачи" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="5,55,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="96" Height="25"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="106,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Дата Рождения" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="11,95,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="109" Height="29"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="125,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+                        <Label Content="Мед. полис" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="260,54,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="81" Height="29"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="346,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                        <TextBox HorizontalAlignment="Left" Style="{StaticResource MyWaterMarkStyle}" Tag="Номер"  Height="25" Margin="177,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+                        <Label Content="ИНН" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="260,94,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Width="81" Height="29"/>
+                        <TextBox HorizontalAlignment="Left"  Height="25" Margin="346,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Grid>
